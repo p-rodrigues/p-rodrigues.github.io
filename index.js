@@ -43,7 +43,7 @@ inputField.addEventListener("input", () => {
       failSignal.style.display = "block";
       passSignal.style.display = "none";
 
-    // For every other serial number play a OK sound and show a pass image  
+    // For every other serial number play a OK sound and show a pass image
     } else {
       const okSound = new Audio("./mp3/ok.mp3");
       okSound.play();
