@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css">
+        <script src="https://cdn.jsdelivr.net/npm/three@0.117.0/build/three.js"></script>
+
+  </head>
+  <body>
+
+
+  <button id="btn_connect">Connect Perifit</button>
+  <select id="devicesSelect"></select>
+  <button id="forgetBluetoothDevice">Forget Perifit Device</button>
+  <br>
+  <div id="device_name"></div><br>
+  <div id="mac_addr"></div>
+  <br>
+
+  <select id="exercise_prefix">
+    <option value="pelvic_relaxation">Pelvic relaxation - normal state</option>
+    <option value="pelvic_contraction">Pelvic contraction - perform max contraction</option>
+    <option value="pelvic_elongation">Pelvic elongation - perform max elongation</option>
+    <option value="abdominal_contraction_pelvic_relaxation">Abdominal contraction with pelvic relaxation</option>
+    <option value="abdominal_contraction_pelvic_contraction">Abdominal contraction with pelvic contraction</option>
+    <option value="paradoxical_contraction">Paradoxical Contraction</option>
+
+  </ul>
+
+  <input type="text" id="exercise_name">
+  <button id="btn_start_exercise">Start Exercise</button>
+  <a id="downloadLink" href="data:text/csv;charset=utf-8," hidden>Download CSV</a>
+    <div class="Parent">
+
+  <div class="chart-container child1" >
+    <h3>ACC</h3>
+    <canvas id="myChart" ></canvas>
+</div>
+
+<div class="chart-container child2">
+  <h3>FSR</h3>
+  <canvas id="myChart_fsr" ></canvas>
+</div>
+    </div>
+    <br>
+    <b>Troubleshoot:</b>
+      <p>
+      - Please use Google Chrome browser. <br>
+      If not working: <br>
+      - Go to <a href="chrome://flags/#enable-web-bluetooth-new-permissions-backend">chrome://flags/#enable-web-bluetooth-new-permissions-backend</a> by copy and pasting to the url bar and enable the flag.<br>
+      - Go to <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a> by copy and pasting to the url bar and enable the flag.<br>
+    </p>
+
+<!--<div style="overflow-x: scroll">
+  <div class="chart-container" style="position: relative;  width:900px;">
+    <canvas id="myChart"></canvas>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</div>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
+  <script src="../js/ble_common.js"></script>
+  <script src="./ble_perifit.js"></script>
+  <script src="./charts.js"></script>
+  </body>
+</html>

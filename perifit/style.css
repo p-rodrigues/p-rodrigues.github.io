@@ -1,0 +1,29 @@
+#container {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+}
+
+.body {
+  padding: 0;
+  margin: 0;
+}
+
+.Parent {
+  margin-top: 4vh;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.child1 {
+  width: 45%;
+  min-width: 40vh;
+  text-align: left;
+}
+
+.child2 {
+  text-align: left;
+  width: 45%;
+  min-width: 40vh;
+}
